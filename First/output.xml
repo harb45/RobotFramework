@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T11:20:00.437552" rpa="false" schemaversion="5">
+<suite id="s1" name="testInstallation" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testInstallation.robot">
+<test id="s1-t1" name="Test Installation" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-26T11:20:00.611376" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-26T11:20:00.611376" elapsed="2.371693"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-26T11:20:02.984063" elapsed="0.024711"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-26T11:20:08.009410" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-26T11:20:03.008774" elapsed="5.000636"/>
+</kw>
+<status status="PASS" start="2024-09-26T11:20:00.611376" elapsed="7.398034"/>
+</test>
+<status status="PASS" start="2024-09-26T11:20:00.437552" elapsed="7.574949"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testInstallation">testInstallation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
