@@ -1,6 +1,7 @@
 *** Settings ***
 
-Library           SeleniumLibrary
+Library           ${SeleniumLibrary}
+Resource          ../Resources/keywords.robot
 
 *** Test Cases ***
 
@@ -26,19 +27,10 @@ Test mainPage
 *** Variables ***
 
 ${URL}    https://naveenautomationlabs.com/opencart/index.php?route=common/home
+${seleniumLibrary}    SeleniumLibrary
 ${BROWSER}    Chrome
 
 *** Keywords ***
-
-Click Menu
-    [Arguments]    ${menu}    ${titrePAge}
-    Click Element    //a[text()='${menu}']
-    Title Should Be    ${titrePAge}
-
-VerifyHomePage
-    [Arguments]    ${locator}
-    Element Should Be Visible    ${locator}
-    Title Should Be    Your Store
 
 Open URL
     [Arguments]    ${url}    ${browser}
