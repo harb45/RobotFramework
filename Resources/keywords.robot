@@ -24,3 +24,13 @@ Open URL
     Maximize Browser Window
     Sleep    2s
     
+Verify Button and Click
+    [Arguments]    ${balise}    ${Attribut}    ${Valeur}
+    Element Should Be Visible    ${balise}\[${Attribut}=${Valeur}]
+    Click Element    ${balise}\[${Attribut}=${Valeur}]
+
+Verify Background Color
+    [Arguments]    ${elem}    ${rgbacolor}
+    ${elem}    Get Webelement    class=alert-success
+    ${bg color}    Call Method    ${elem}    value_of_css_property    background-color
+    Should Be Equal    ${bg color}    rgba(223, 240, 216, 1)
