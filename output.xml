@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-02T12:02:42.529843" rpa="false" schemaversion="5">
+<suite id="s1" name="First" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First">
+<suite id="s1-s1" name="testCategory" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testCategory.robot">
+<test id="s1-s1-t1" name="Test Verfy the header bar" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:02:42.706083" level="INFO">Opening browser 'Chrome' to base url 'https://naveenautomationlabs.com/opencart/index.php?route=common/home'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-02T12:02:42.706083" elapsed="3.630053"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-02T12:02:46.337438" elapsed="0.028918"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:02:46.381427" level="INFO">${elementLen} = 8</msg>
+<var>${elementLen}</var>
+<arg>//ul[@class='nav navbar-nav']/li</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-10-02T12:02:46.367358" elapsed="0.014069"/>
+</kw>
+<for flavor="IN ENUMERATE">
+<iter>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:02:46.382017" level="INFO">Simulating Mouse Over on element '(//ul[@class='nav navbar-nav']/li)[1]'.</msg>
+<arg>(//ul[@class='nav navbar-nav']/li)[${index+1}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-10-02T12:02:46.382017" elapsed="0.278535"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T12:02:48.661534" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T12:02:46.661101" elapsed="2.000433"/>
+</kw>
+<var name="${index}">0</var>
+<var name="${chaqueCategory}">{'cat': 'Desktop', 'sousCat': 'Mac'}</var>
+<status status="PASS" start="2024-10-02T12:02:46.382017" elapsed="2.279517"/>
+</iter>
+<iter>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-02T12:02:48.661534" level="INFO">Simulating Mouse Over on element '(//ul[@class='nav navbar-nav']/li)[2]'.</msg>
+<errors>
+<msg time="2024-10-02T12:02:51.204321" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>

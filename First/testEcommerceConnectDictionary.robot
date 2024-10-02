@@ -8,6 +8,7 @@ Resource        ../Resources/keywords.robot
 Test Connect
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
+    &{logins}    Create Dictionary    login=${username}    pswrd=${password}
     Sleep    2s
     Element Should Be Visible    //div[@id='slideshow0']
     Element Should Be Visible    //a[@class='dropdown-toggle']
@@ -15,8 +16,8 @@ Test Connect
     Sleep    2s
     Click Menu    Login    Account Login
     Sleep    2s
-    Input Text    //input[@id='input-email']    ${username}
-    Input Password    //input[@id='input-password']    ${password}    
+    Input Text    //input[@id='input-email']    ${logins.login}
+    Input Password    //input[@id='input-password']    ${logins.pswrd}    
     Sleep    2s
     Verify Button and Click    //input    @value    'Login'
     Title Should Be    My Account
@@ -29,6 +30,7 @@ Test Connect
     # Element Should Be Visible    //a[text()='Logout']
     # Click Element    //a[text()='Logout']
     Sleep    2s
+    Close Browser
     
 *** Variables ***
 

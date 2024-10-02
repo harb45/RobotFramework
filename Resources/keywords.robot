@@ -22,7 +22,6 @@ Open URL
     [Arguments]    ${url}    ${browser}
     Open Browser    ${url}    ${browser}
     Maximize Browser Window
-    Sleep    2s
     
 Verify Button and Click
     [Arguments]    ${balise}    ${Attribut}    ${Valeur}

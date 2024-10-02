@@ -1,27 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T11:20:00.437552" rpa="false" schemaversion="5">
-<suite id="s1" name="testInstallation" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testInstallation.robot">
-<test id="s1-t1" name="Test Installation" line="7">
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-02T16:38:53.199094" rpa="false" schemaversion="5">
+<suite id="s1" name="testEcommerceConnectIf" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\first\testEcommerceConnectIf.robot">
+<test id="s1-t1" name="Test Connect" line="32">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-26T11:20:00.611376" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
-<arg>https://google.com</arg>
-<arg>chrome</arg>
+<msg time="2024-10-02T16:38:53.381555" level="INFO">Opening browser 'Chrome' to base url 'https://naveenautomationlabs.com/opencart/index.php?route=common/home'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-26T11:20:00.611376" elapsed="2.371693"/>
+<status status="PASS" start="2024-10-02T16:38:53.381555" elapsed="4.913906"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-26T11:20:02.984063" elapsed="0.024711"/>
+<status status="PASS" start="2024-10-02T16:38:58.296122" elapsed="0.035682"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-09-26T11:20:08.009410" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-09-26T11:20:03.008774" elapsed="5.000636"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.347615" level="INFO">Element '//div[@id='slideshow0']' is displayed.</msg>
+<arg>//div[@id='slideshow0']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.331804" elapsed="0.015811"/>
 </kw>
-<status status="PASS" start="2024-09-26T11:20:00.611376" elapsed="7.398034"/>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.359506" level="INFO">Element '//a[@class='dropdown-toggle']' is displayed.</msg>
+<arg>//a[@class='dropdown-toggle']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.347615" elapsed="0.011891"/>
+</kw>
+<kw name="Verify Button and Click" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.370581" level="INFO">Element '//span[@class='caret']' is displayed.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.360503" elapsed="0.010078"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.371474" level="INFO">Clicking element '//span[@class='caret']'.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.370581" elapsed="0.031286"/>
+</kw>
+<arg>//span</arg>
+<arg>@class</arg>
+<arg>'caret'</arg>
+<status status="PASS" start="2024-10-02T16:38:58.360503" elapsed="0.041364"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.402858" level="INFO">Simulating Mouse Over on element '//a[text()='Login']'.</msg>
+<arg>//a[text()='Login']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.402858" elapsed="0.272853"/>
+</kw>
+<msg time="2024-10-02T16:38:58.675711" level="INFO">${conection} = True</msg>
+<var>${conection}</var>
+<arg>Mouse Over</arg>
+<arg>//a[text()='Login']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.401867" elapsed="0.273844"/>
+</kw>
+<if>
+<branch type="IF" condition="${conection}">
+<kw name="Login">
+<kw name="Click Menu" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:58.679659" level="INFO">Clicking element '//a[text()='Login']'.</msg>
+<arg>//a[text()='${menu}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:58.679659" elapsed="0.354189"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.037356" level="INFO">Page title is 'Account Login'.</msg>
+<arg>${titrePAge}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.033848" elapsed="0.003508"/>
+</kw>
+<arg>Login</arg>
+<arg>Account Login</arg>
+<status status="PASS" start="2024-10-02T16:38:58.678663" elapsed="0.358693"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.037356" level="INFO">Typing text 'qamha.automatisation@gmail.com' into text field '//input[@id='input-email']'.</msg>
+<arg>//input[@id='input-email']</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.037356" elapsed="0.086403"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.123759" level="INFO">Typing password into text field '//input[@id='input-password']'.</msg>
+<msg time="2024-10-02T16:38:59.141105" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id='input-password']</arg>
+<arg>${pswrd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.123759" elapsed="0.052323"/>
+</kw>
+<kw name="Verify Button and Click" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.187832" level="INFO">Element '//input[@value='Login']' is displayed.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.176082" elapsed="0.011750"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.187832" level="INFO">Clicking element '//input[@value='Login']'.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.187832" elapsed="0.628778"/>
+</kw>
+<arg>//input</arg>
+<arg>@value</arg>
+<arg>'Login'</arg>
+<status status="PASS" start="2024-10-02T16:38:59.176082" elapsed="0.640528"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.820102" level="INFO">Page title is 'My Account'.</msg>
+<arg>My Account</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.816610" elapsed="0.003492"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-10-02T16:38:58.677656" elapsed="1.142446"/>
+</kw>
+<status status="PASS" start="2024-10-02T16:38:58.676709" elapsed="1.143393"/>
+</branch>
+<branch type="ELSE">
+<kw name="Deconnect">
+<status status="NOT RUN" start="2024-10-02T16:38:59.820102" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-10-02T16:38:59.820102" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-10-02T16:38:58.676709" elapsed="1.143393"/>
+</if>
+<kw name="Verify Button and Click" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.826730" level="INFO">Element '//span[@class='caret']' is displayed.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.821174" elapsed="0.005556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.826730" level="INFO">Clicking element '//span[@class='caret']'.</msg>
+<arg>${balise}\[${Attribut}=${Valeur}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.826730" elapsed="0.026747"/>
+</kw>
+<arg>//span</arg>
+<arg>@class</arg>
+<arg>'caret'</arg>
+<status status="PASS" start="2024-10-02T16:38:59.821093" elapsed="0.032384"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.854625" level="INFO">Simulating Mouse Over on element '//a[text()='Login']'.</msg>
+<msg time="2024-10-02T16:38:59.981271" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-02T16:38:59.982744" level="FAIL">Element with locator '//a[text()='Login']' not found.</msg>
+<arg>//a[text()='Login']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="FAIL" start="2024-10-02T16:38:59.854625" elapsed="0.128119">Element with locator '//a[text()='Login']' not found.</status>
+</kw>
+<msg time="2024-10-02T16:38:59.982744" level="INFO">${conection} = False</msg>
+<var>${conection}</var>
+<arg>Mouse Over</arg>
+<arg>//a[text()='Login']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.853477" elapsed="0.130708"/>
+</kw>
+<if>
+<branch type="IF" condition="${conection}">
+<kw name="Login">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2024-10-02T16:38:59.984185" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-10-02T16:38:59.984185" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Deconnect">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:38:59.985315" level="INFO">Clicking element '//i[@class='fa fa-home']'.</msg>
+<arg>//i[@class='fa fa-home']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:38:59.984185" elapsed="0.390171"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:39:00.393477" level="INFO">Element '//a[@class='dropdown-toggle']' is displayed.</msg>
+<arg>//a[@class='dropdown-toggle']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:39:00.374356" elapsed="0.019121"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:39:00.393477" level="INFO">Clicking element '//a[@class='dropdown-toggle']'.</msg>
+<arg>//a[@class='dropdown-toggle']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:39:00.393477" elapsed="0.024751"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:39:00.429901" level="INFO">Element '//a[text()='Logout']' is displayed.</msg>
+<arg>//a[text()='Logout']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T16:39:00.418228" elapsed="0.012777"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T16:39:00.431005" level="INFO">Clicking element '//a[text()='Logout']'.</msg>
+<arg>//a[text()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T16:39:00.431005" elapsed="0.579817"/>
+</kw>
+<status status="PASS" start="2024-10-02T16:38:59.984185" elapsed="1.026637"/>
+</kw>
+<status status="PASS" start="2024-10-02T16:38:59.984185" elapsed="1.026637"/>
+</branch>
+<status status="PASS" start="2024-10-02T16:38:59.984185" elapsed="1.026637"/>
+</if>
+<status status="PASS" start="2024-10-02T16:38:53.374536" elapsed="7.637306"/>
 </test>
-<status status="PASS" start="2024-09-26T11:20:00.437552" elapsed="7.574949"/>
+<status status="PASS" start="2024-10-02T16:38:53.199094" elapsed="7.812748"/>
 </suite>
 <statistics>
 <total>
@@ -30,7 +222,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="testInstallation">testInstallation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="testEcommerceConnectIf">testEcommerceConnectIf</stat>
 </suite>
 </statistics>
 <errors>

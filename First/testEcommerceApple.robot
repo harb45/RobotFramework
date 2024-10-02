@@ -6,7 +6,7 @@ Resource    ../Resources/Variables.robot
 *** Test Cases ***
 
 Test SelectList
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${url}    ${BROWSER}
     Maximize Browser Window
     Sleep    1s
     Element Should Be Visible    //div[@id='slideshow0']

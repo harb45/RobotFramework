@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-02T15:00:41.555640" rpa="false" schemaversion="5">
+<suite id="s1" name="RF Exercices" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices">
+<suite id="s1-s1" name="First" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First">
+<suite id="s1-s1-s1" name="testEcommerceClic" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testEcommerceClic.robot">
+<test id="s1-s1-s1-t1" name="Test mainPage" line="8">
+<kw name="Open URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:41.740267" level="INFO">Opening browser 'Chrome' to base url 'https://naveenautomationlabs.com/opencart/index.php?route=common/home'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-02T15:00:41.739173" elapsed="4.704548"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-02T15:00:46.443721" elapsed="0.022470"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T15:00:48.466493" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T15:00:46.466191" elapsed="2.000302"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2024-10-02T15:00:41.737883" elapsed="6.728610"/>
+</kw>
+<kw name="VerifyHomePage" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:48.497337" level="INFO">Element '//div[@id='slideshow0']' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T15:00:48.466493" elapsed="0.030844"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:48.497337" level="INFO">Page title is 'Your Store'.</msg>
+<arg>Your Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T15:00:48.497337" elapsed="0.000000"/>
+</kw>
+<arg>//div[@id='slideshow0']</arg>
+<status status="PASS" start="2024-10-02T15:00:48.466493" elapsed="0.030844"/>
+</kw>
+<kw name="Click Menu" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:48.513859" level="INFO">Clicking element '//a[text()='Software']'.</msg>
+<arg>//a[text()='${menu}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T15:00:48.512844" elapsed="0.619465"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:49.134607" level="INFO">Page title is 'Software'.</msg>
+<arg>${titrePAge}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T15:00:49.132581" elapsed="0.003023"/>
+</kw>
+<arg>Software</arg>
+<arg>Software</arg>
+<status status="PASS" start="2024-10-02T15:00:48.497337" elapsed="0.638267"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:49.152003" level="INFO">Element '//div[@id="content"]/p' contains text 'There are no products to list in this category.'.</msg>
+<arg>//div[@id="content"]/p</arg>
+<arg>There are no products to list in this category.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-02T15:00:49.135604" elapsed="0.016399"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T15:00:51.153264" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T15:00:49.153006" elapsed="2.000258"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:51.153264" level="INFO">Clicking element '//a[@class='btn btn-primary']'.</msg>
+<arg>//a[@class='btn btn-primary']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-02T15:00:51.153264" elapsed="0.472390"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-02T15:00:53.626902" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-02T15:00:51.625654" elapsed="2.002468"/>
+</kw>
+<kw name="VerifyHomePage" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:53.661755" level="INFO">Element '//div[@class='swiper-wrapper']' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-02T15:00:53.629687" elapsed="0.032068"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-02T15:00:53.663268" level="INFO">Page title is 'Your Store'.</msg>
+<arg>Your Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-10-02T15:00:53.661755" elapsed="0.001513"/>
+</kw>
+<arg>//div[@class='swiper-wrapper']</arg>
+<status status="PASS" start="2024-10-02T15:00:53.629687" elapsed="0.033581"/>
+</kw>
+<status status="PASS" start="2024-10-02T15:00:41.736705" elapsed="11.926563"/>
+</test>
+<status status="PASS" start="2024-10-02T15:00:41.585898" elapsed="12.077370"/>
+</suite>
+<status status="PASS" start="2024-10-02T15:00:41.585898" elapsed="12.077370"/>
+</suite>
+<status status="PASS" start="2024-10-02T15:00:41.570381" elapsed="12.092887"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RF Exercices">RF Exercices</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="First">RF Exercices.First</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testEcommerceClic">RF Exercices.First.testEcommerceClic</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
