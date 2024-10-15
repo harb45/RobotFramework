@@ -1,112 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-02T15:00:41.555640" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-09T12:30:18.432743" rpa="false" schemaversion="5">
 <suite id="s1" name="RF Exercices" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices">
 <suite id="s1-s1" name="First" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First">
-<suite id="s1-s1-s1" name="testEcommerceClic" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testEcommerceClic.robot">
-<test id="s1-s1-s1-t1" name="Test mainPage" line="8">
-<kw name="Open URL">
+<suite id="s1-s1-s1" name="testEcommerceVerifyResults" source="C:\Users\Administrateur\Desktop\RobotFramework\RF Exercices\First\testEcommerceVerifyResults.robot">
+<test id="s1-s1-s1-t1" name="Test vérifier résultat" line="14">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:41.740267" level="INFO">Opening browser 'Chrome' to base url 'https://naveenautomationlabs.com/opencart/index.php?route=common/home'.</msg>
+<msg time="2024-10-09T12:30:18.592667" level="INFO">Opening browser 'Chrome' to base url 'https://naveenautomationlabs.com/opencart/index.php?route=product/category&amp;path=25'.</msg>
 <arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-02T15:00:41.739173" elapsed="4.704548"/>
+<status status="PASS" start="2024-10-09T12:30:18.592667" elapsed="2.816757"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-02T15:00:46.443721" elapsed="0.022470"/>
+<status status="PASS" start="2024-10-09T12:30:21.410471" elapsed="0.030507"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-02T15:00:48.466493" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-02T15:00:46.466191" elapsed="2.000302"/>
-</kw>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<status status="PASS" start="2024-10-02T15:00:41.737883" elapsed="6.728610"/>
-</kw>
-<kw name="VerifyHomePage" owner="keywords">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:48.497337" level="INFO">Element '//div[@id='slideshow0']' is displayed.</msg>
-<arg>${locator}</arg>
+<msg time="2024-10-09T12:30:21.460987" level="INFO">Element '//h2' is displayed.</msg>
+<arg>//h2</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-02T15:00:48.466493" elapsed="0.030844"/>
+<status status="PASS" start="2024-10-09T12:30:21.440978" elapsed="0.020009"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:48.497337" level="INFO">Page title is 'Your Store'.</msg>
-<arg>Your Store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-10-02T15:00:48.497337" elapsed="0.000000"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.460987" level="INFO">Verifying element '//h2' contains exact text 'Components'.</msg>
+<arg>//h2</arg>
+<arg>Components</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.460987" elapsed="0.015243"/>
 </kw>
-<arg>//div[@id='slideshow0']</arg>
-<status status="PASS" start="2024-10-02T15:00:48.466493" elapsed="0.030844"/>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.479221" level="INFO">${elementLen} = 5</msg>
+<var>${elementLen}</var>
+<arg>//div[@class='col-sm-3']/ul</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.476230" elapsed="0.002991"/>
 </kw>
-<kw name="Click Menu" owner="keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:48.513859" level="INFO">Clicking element '//a[text()='Software']'.</msg>
-<arg>//a[text()='${menu}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-02T15:00:48.512844" elapsed="0.619465"/>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.495462" level="INFO">${element} = Mice and Trackballs (0)</msg>
+<var>${element}</var>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.479221" elapsed="0.019187"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:49.134607" level="INFO">Page title is 'Software'.</msg>
-<arg>${titrePAge}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-10-02T15:00:49.132581" elapsed="0.003023"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.498408" level="INFO">Verifying element '//div[@class='col-sm-3']/ul/li' contains exact text 'Mice and Trackballs (0)'.</msg>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.498408" elapsed="0.009715"/>
 </kw>
-<arg>Software</arg>
-<arg>Software</arg>
-<status status="PASS" start="2024-10-02T15:00:48.497337" elapsed="0.638267"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T12:30:21.508628" level="INFO">Le résultat 0 est Mice and Trackballs (0) et est trouvé avec succès</msg>
+<arg>Le résultat ${index} est ${element} et est trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.508628" elapsed="0.000000"/>
 </kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:49.152003" level="INFO">Element '//div[@id="content"]/p' contains text 'There are no products to list in this category.'.</msg>
-<arg>//div[@id="content"]/p</arg>
-<arg>There are no products to list in this category.</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-10-02T15:00:49.135604" elapsed="0.016399"/>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-10-09T12:30:21.479221" elapsed="0.029407"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.513675" level="INFO">${element} = Mice and Trackballs (0)</msg>
+<var>${element}</var>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.508628" elapsed="0.005047"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-02T15:00:51.153264" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-02T15:00:49.153006" elapsed="2.000258"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.513675" level="INFO">Verifying element '//div[@class='col-sm-3']/ul/li' contains exact text 'Mice and Trackballs (0)'.</msg>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.513675" elapsed="0.016875"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:51.153264" level="INFO">Clicking element '//a[@class='btn btn-primary']'.</msg>
-<arg>//a[@class='btn btn-primary']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-02T15:00:51.153264" elapsed="0.472390"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T12:30:21.530550" level="INFO">Le résultat 1 est Mice and Trackballs (0) et est trouvé avec succès</msg>
+<arg>Le résultat ${index} est ${element} et est trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.530550" elapsed="0.000000"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-02T15:00:53.626902" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-02T15:00:51.625654" elapsed="2.002468"/>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-10-09T12:30:21.508628" elapsed="0.021922"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.540277" level="INFO">${element} = Mice and Trackballs (0)</msg>
+<var>${element}</var>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.531546" elapsed="0.008731"/>
 </kw>
-<kw name="VerifyHomePage" owner="keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:53.661755" level="INFO">Element '//div[@class='swiper-wrapper']' is displayed.</msg>
-<arg>${locator}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-10-02T15:00:53.629687" elapsed="0.032068"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.541476" level="INFO">Verifying element '//div[@class='col-sm-3']/ul/li' contains exact text 'Mice and Trackballs (0)'.</msg>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.541167" elapsed="0.002685"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-10-02T15:00:53.663268" level="INFO">Page title is 'Your Store'.</msg>
-<arg>Your Store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-10-02T15:00:53.661755" elapsed="0.001513"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T12:30:21.543852" level="INFO">Le résultat 2 est Mice and Trackballs (0) et est trouvé avec succès</msg>
+<arg>Le résultat ${index} est ${element} et est trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.543852" elapsed="0.000000"/>
 </kw>
-<arg>//div[@class='swiper-wrapper']</arg>
-<status status="PASS" start="2024-10-02T15:00:53.629687" elapsed="0.033581"/>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-10-09T12:30:21.530550" elapsed="0.013302"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.558063" level="INFO">${element} = Mice and Trackballs (0)</msg>
+<var>${element}</var>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.543852" elapsed="0.014211"/>
 </kw>
-<status status="PASS" start="2024-10-02T15:00:41.736705" elapsed="11.926563"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-09T12:30:21.558063" level="INFO">Verifying element '//div[@class='col-sm-3']/ul/li' contains exact text 'Mice and Trackballs (0)'.</msg>
+<arg>//div[@class='col-sm-3']/ul/li</arg>
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.558063" elapsed="0.009219"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-09T12:30:21.567282" level="INFO">Le résultat 3 est Mice and Trackballs (0) et est trouvé avec succès</msg>
+<arg>Le résultat ${index} est ${element} et est trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-09T12:30:21.567282" elapsed="0.000000"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-10-09T12:30:21.543852" elapsed="0.023430"/>
+</iter>
+<var>${index}</var>
+<value>0</value>
+<value>${elementLen-1}</value>
+<status status="PASS" start="2024-10-09T12:30:21.479221" elapsed="0.088061"/>
+</for>
+<status status="PASS" start="2024-10-09T12:30:18.592667" elapsed="2.974615"/>
 </test>
-<status status="PASS" start="2024-10-02T15:00:41.585898" elapsed="12.077370"/>
+<status status="PASS" start="2024-10-09T12:30:18.474916" elapsed="3.098593"/>
 </suite>
-<status status="PASS" start="2024-10-02T15:00:41.585898" elapsed="12.077370"/>
+<status status="PASS" start="2024-10-09T12:30:18.472922" elapsed="3.101598"/>
 </suite>
-<status status="PASS" start="2024-10-02T15:00:41.570381" elapsed="12.092887"/>
+<status status="PASS" start="2024-10-09T12:30:18.453906" elapsed="3.121807"/>
 </suite>
 <statistics>
 <total>
@@ -117,7 +154,7 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="RF Exercices">RF Exercices</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="First">RF Exercices.First</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testEcommerceClic">RF Exercices.First.testEcommerceClic</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testEcommerceVerifyResults">RF Exercices.First.testEcommerceVerifyResults</stat>
 </suite>
 </statistics>
 <errors>
